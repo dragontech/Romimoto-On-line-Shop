@@ -1,0 +1,25 @@
+<title><%= title %></title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<%= csrf_meta_tag %>
+<%#= raw stylesheet_tags %>
+<%= stylesheet_link_tag 'style', 'layout', 'anythingslider.css' %>
+<%= javascript_include_tag 'jquery-1.4.2.min', 'jquery.validate.min.js', 'rails', 'application', 'menu', 'jquery.easing.1.2.js', 'swfobject.js', 'jquery.anythingslider.min.js',  :cache => 'jquery-core' %>
+<!--[if lt IE 7]
+  <%= javascript_include_tag 'ie_png' %>
+  <script type="text/javascript">
+    ie_png.fix('.png, .splash');
+  </script>
+<![endif]-->
+<!--[if lt IE 9]>
+  <%= javascript_include_tag 'IE9' %>
+<![endif]-->
+<!--[if IE]>
+  <%= stylesheet_link_tag 'ie_style' %>
+<![endif]-->
+<% unless I18n.locale.to_s[0..1] == 'en' %>
+  <%= javascript_include_tag ['localization/messages_', I18n.locale.to_s[0..1], '.js'].join %>
+<% end %>
+<%= yield :head %>
+<%= raw meta_data_tags %>
+
+

@@ -1,0 +1,54 @@
+<div class="splash">
+  <section>
+    <div class="container">
+      <div class="indent">
+        <div class="wrapper">
+          <dl>
+            <dt>
+              <%= t('order') %>
+            </dt>
+            <dd>
+              <ul>
+                <li><%= link_to(t('how_to_order'), '') %></li>
+                <li><%= link_to(t('payment_methods'), '') %></li>
+                <li><%= link_to(t('shipping_costs'), '') %></li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <%= t('information') %>
+            </dt>
+            <dd>
+              <ul>
+                <li><%= link_to(t('faq'), '') %></li>
+                <li><%= link_to(t('terms'), '') %></li>
+                <li><%= link_to(t('privacy_policy'), '') %></li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <%= t('contact') %>
+            </dt>
+            <dd>
+              <ul>
+                <li><%= link_to(CLIENT[:contact_email], "mailto:#{CLIENT[:contact_email]}") %></li>
+                <li><%= CLIENT[:phone_1] %></li>
+                <li><%= CLIENT[:phone_2] %></li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="last">
+    <div class="container">
+      Acrosoft © 2011 
+    </div>
+  </section>
+</div>
+
+
+<%= render 'shared/google_analytics' %>

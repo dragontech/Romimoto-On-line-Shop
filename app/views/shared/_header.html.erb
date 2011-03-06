@@ -1,0 +1,19 @@
+<div class="container clearfix">
+  <div class="top clearfix">
+    <ul>
+      <li class="lang"><%= languages_bar %></li>
+      <li class="message"><%= render 'shared/login_bar' %></li>
+      <li class="cart"><%= img_link_to_cart %></li>
+    </ul>
+  </div>
+
+  <div class="logo">
+    <%= link_to(image_tag('logo.png'), root_path) %>
+  </div>
+
+  <div class="promo"><%= link_to(t('promotions'), '#') %></div>
+
+  <div class="search">
+    <%= render 'shared/search' %>
+  </div>
+</div>

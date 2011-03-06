@@ -1,0 +1,13 @@
+<div class="container">
+  <ul id="mainnav">
+  <% Taxonomy.find_by_name('Categories').root.children.each do |taxonomy| %>
+    <li<%= ' class="current"' if @taxon and ([@taxon] + @taxon.ancestors).include?(taxonomy) %>><%= taxonomy.name %>
+      <ul id="subnav">
+      <% taxonomy.children.each do |taxon| %>
+        <li<%= ' class="current"' if @taxon and ([@taxon] + @taxon.ancestors).include?(taxon) %>><%= link_to taxon.name, seo_url(taxon) %></li>
+      <% end %>
+      </ul>
+    </li>
+  <% end %>
+  </ul>
+</div>
