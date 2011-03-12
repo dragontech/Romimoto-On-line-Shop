@@ -1,0 +1,36 @@
+<%= form_for :order, :url => populate_orders_url do |f| %>
+
+  <%= hook :inside_product_cart_form do %>
+  <div id="cart_product_variants">
+    <% if @product.has_variants? %>
+      <div id="product-variants">
+          <%= render :partial => 'selects', :locals => {:f => f} %>
+      </div>
+    <% end%>
+    <% if @product.has_stock? || Spree::Config[:allow_backorders] %>
+      <%= label_tag(:quantity, t('quantity')) %>
+      <%= text_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), 1, :class => "title", :size => 3 %>
+      <% if product_price(@product) %>
+        <%= hook :product_price do %>
+          <br /><br />
+          <p class="prices">
+            <%= t("price") %>
+            <span class="price selling update"><%= product_price(@product) %></span>
+          </p>
+        <% end %>
+      <% end %>
+
+      <button type='submit' class='large primary'>
+        <%= image_tag('/images/add-to-cart.png') + t('add_to_cart') %>
+      </button>
+    <% else %>
+      <%= content_tag('strong', t('out_of_stock')) %>
+    <% end %>
+  </div>
+  <% end %>
+<% end %>
+
+<% content_for :head do %>
+  <%= javascript_include_tag 'product' %>
+<% end %>
+

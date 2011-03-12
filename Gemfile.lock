@@ -13,6 +13,20 @@ GIT
       spree_core (>= 0.30.0)
 
 GIT
+  remote: https://github.com/citrus/spree_related_products.git
+  revision: 1c0dd3ebca7bd4836542beaaf76e962a5473397f
+  specs:
+    spree_related_products (3.0.2)
+      spree_core (>= 0.30.0)
+
+GIT
+  remote: https://github.com/romul/spree-enhanced-option-types.git
+  revision: d451c5ba137e0fd880c55009767aad3f2321fcb0
+  specs:
+    spree_enhanced_option_types (0.30.0)
+      spree_core (>= 0.30.2)
+
+GIT
   remote: https://tomash@github.com/tomash/globalize-spree.git
   revision: 9560f9f7d7e35082ff395776e9a1d02daa9b7ffe
   specs:
@@ -169,4 +183,6 @@ DEPENDENCIES
   rails (= 3.0.4)
   spree
   spree-homepager!
+  spree_enhanced_option_types!
   spree_i18n!
+  spree_related_products!

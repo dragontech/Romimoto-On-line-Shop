@@ -36,3 +36,5 @@ gem "globalize_spree", :git => 'https://tomash@github.com/tomash/globalize-spree
 gem "i18n"
 gem "globalize3"
 gem "spree-homepager", :git => "git://github.com/pero-ict/spree-homepager.git", :require => "homepager"  
+gem "spree_enhanced_option_types", :git => 'https://github.com/romul/spree-enhanced-option-types.git'
+gem "spree_related_products", :git => 'https://github.com/citrus/spree_related_products.git'

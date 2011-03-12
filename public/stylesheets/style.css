@@ -195,10 +195,9 @@ a:hover{
 }
 
 h1 {
-	font-size:90px;
+	font-size:2em;
 	line-height:1.2em;
 	color:#010101;
-	letter-spacing:-5px;
 }
 	h1 a {
 		color:#010101;
@@ -847,3 +846,34 @@ body > footer section.last {
 /* Hide from IE Mac \*/
 .clearfix {display:block;}
 /* End hide from IE Mac */
+
+div.breadcrumbs ul {
+    padding: 10px;
+  }
+div.breadcrumbs ul li {
+  float:left;
+  text-transform:lowercase;
+}
+.fl {
+  float:left;
+}
+.half {
+  width:50%;
+}
+div#cart_product_variants {
+  margin-top:1em;
+}
+div.option-type-wrapper {
+  float:left;
+  margin-right:1em;
+}
+div#product-description {
+  background-color:#e8e8e8;
+  margin-top:1em;
+  padding: 1em;
+}
+ul#product-thumbnails li {
+  float:left;
+  margin:1em;
+}
+

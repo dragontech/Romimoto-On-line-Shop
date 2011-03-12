@@ -14,18 +14,18 @@
       <%= render 'shared/nav_bar' %>
     </nav>
     <section id="content">
-   <div class="container">
- <div class="indent">
-    <%= breadcrumbs(@taxon) if @taxon %>
-      <% if flash.notice %>
-      <div class="flash notice"><%= flash.notice %></div>
-      <% end %>
-      <% if flash[:error] %>
-      <div class="flash errors"><%= flash[:error] %></div>
-      <% end %>
-      <%= yield %>
-    </div>
-    </div>
+      <div class="container">
+        <div class="indent clearfix">
+          <%= breadcrumbs(@taxon) if @taxon %>
+          <% if flash.notice %>
+            <div class="flash notice"><%= flash.notice %></div>
+          <% end %>
+          <% if flash[:error] %>
+            <div class="flash errors"><%= flash[:error] %></div>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
     </section>
     <footer>
       <%= render :partial => 'shared/footer'%>
